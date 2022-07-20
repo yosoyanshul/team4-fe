@@ -1,24 +1,41 @@
 import logo from './logo.svg';
 import './App.css';
+import Home from "./MyComp/Home";
+import Content from "./MyComp/Content";
+import About from "./MyComp/About";
+import Uploa from "./MyComp/Uploa";
+import Search from "./MyComp/Search";
+import Profile from "./MyComp/Profile";
+import Foote from "./MyComp/Foote";
+// import 
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Link
+} from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+ <>
+ <Router>
+       
+  <Home/>
+       <Routes>
+          {/* <Route path="/Upload" element={<Uploa/>}>
+          </Route> */}
+          <Route path="/" element={<Content/>}>
+          </Route>
+          <Route path="/Search" element={<Search/>}/>
+          <Route path="/Profile" element={<Profile/>}>
+          </Route>
+          <Route path="/">
+          </Route>
+      </Routes>
+     
+   <Foote/>
+</Router>
+ </>
   );
 }
 

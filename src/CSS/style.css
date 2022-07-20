@@ -1,0 +1,10 @@
+img
+{
+    max-width: 100%;
+}
+.background-Image
+{
+    width:100%;
+    justify-content: center;
+    align-items: center;
+}
