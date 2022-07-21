@@ -3,11 +3,12 @@ import { Auth } from 'aws-amplify';
 
 export default class Navbar extends Component {
   handleLogOut = async event => {
-    event.preventDefault();
+  //  event.preventDefault();
     try {
       Auth.signOut();
       this.props.auth.setAuthStatus(false);
       this.props.auth.setUser(null);
+      this.props.history.push("/");
     }catch(error) {
       console.log(error.message);
     }
@@ -30,7 +31,7 @@ export default class Navbar extends Component {
             <br/><br/>
             
             <div className="navbar-start">
-               <a href="/" className="navbar-item"> Home </a>
+              
            
             {this.props.auth.isAuthenticated &&( 
                  <a href="/Search" className="navbar-item">
