@@ -29,7 +29,7 @@ export default function Home() {
       </ul>
       <form className="d-flex" role="search">
         {/* <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/> */}
-        <button className="btn btn-outline-success" >Logout</button>
+        <button onClick={<Home/>} className="btn btn-outline-success"  >Logout</button>
       </form>
     </div>
   </div>

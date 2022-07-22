@@ -14,6 +14,7 @@ import {
   Routes,
   Link
 } from "react-router-dom";
+import EmployeeContextProvider from './contexts/EmployeeContext';
 
 function App() {
   return (
@@ -27,7 +28,9 @@ function App() {
           <Route path="/" element={<Content/>}>
           </Route>
           <Route path="/Search" element={<Search/>}/>
-          <Route path="/Profile" element={<Profile/>}>
+          <Route path="/Profile" element={
+          <EmployeeContextProvider> <Profile/></EmployeeContextProvider>
+         }>
           </Route>
           <Route path="/">
           </Route>

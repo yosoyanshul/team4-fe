@@ -1,3 +1,4 @@
+import { TextRotationAngleupRounded } from '@material-ui/icons'
 import React from 'react'
 
 export default function Foote() {
@@ -5,6 +6,7 @@ export default function Foote() {
   position:"relative",
   width:"100%",
   top:"90vh",
+
   }
   return (
     
